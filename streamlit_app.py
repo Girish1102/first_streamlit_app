@@ -47,7 +47,7 @@ try:
 except URLError as e:
   streamlit.error()
     
-streamlit.stop()
+#streamlit.stop()
 
 
 
@@ -74,14 +74,7 @@ def insert_row_into_snowflake(fruit_choice1):
   with my_cnx.cursor() as my_cur:
     my_cur.execute("insert into fruit_load_list values ('from streamlit')")
     return "Thank you for adding", fruit_choice1
-  
-  
-
-
-
-
-
-
+ 
 
 
 streamlit.header("The fruit_load_list contain")
